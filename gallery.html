@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+      body {
+      font-family: sans-serif;
+      }
+      .gallery {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      }
+      .gallery img {
+      width: 250px;
+      height: 250px;
+      border-radius: 10px;
+      }
+      #lightbox img {
+      height: 75vh;
+      width: 80vh;
+      border-radius: 10px;
+      }
+      #lightbox {
+      background: rgba(0,0,0,0.9);
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      }
+      .close, .prev, .next {
+      text-decoration: none;
+      position: absolute;
+      padding: 8px 16px;
+      font-size: 25px;
+      background-color: #f1f1f1;
+      color: black;
+      cursor: pointer;
+      border-radius: 50%;
+      }
+      .icon:hover {
+      background-color: #ddd;
+      color: black;
+      }
+      .close {
+      right: 150px;
+      top: 100px;
+      }
+      .prev {
+      left: 150px;
+      }
+      .next {
+      right: 150px;
+      }
+   </style>
+   <body>
+    <!-- Image Gallery -->
+      <div class="gallery">
+         <img src="res/img/img1.jpg">
+         <img src="res/img/img2.jpg">
+         <img src="res/img/img3.jpg">
+         <img src="res/img/img4.jpg">
+         <img src="res/img/img5.jpg">
+         <img src="res/img/img6.jpg">
+         <img src="res/img/img7.jpg">
+         <img src="res/img/img8.png">
+      </div>
+      <!-- Lightbox with control buttons -->
+      <div id="lightbox">
+         <div class="close icon">X</div>
+         <div class="prev icon">&#8249;</div>
+         <div class="next icon">&#8250;</div>
+         <img src="#">
+      </div>
+      <!-- Jquery Scipt -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+		// Keep navigation bar fixed
+         $(window).scroll(function() {
+             $(".navbar").css("position", "fixed").css("top", "0");
+         });
+
+	  
+         $(function(){
+         // Lightbox function
+         var lightbox = function(){
+         var src = $('.active').attr('src');
+         $('#lightbox img').attr('src', src);
+         }
+         
+         // An image is opened
+         $('img').click(function(){
+         $('#lightbox').css('display','flex');
+         $(this).addClass('active');
+         lightbox();
+         });
+         
+         // Close button clicked
+         $('.close').click(function(){
+         $('img').removeClass('active');
+         $('#lightbox').hide();
+         });
+         
+          // Close lightbox when clicked outside of the image
+          $('#lightbox').click(function(event) {
+             if (event.target.id == 'lightbox') {
+                 $('#lightbox').hide();
+                 $('img').removeClass('active');
+             }
+         });
+         
+         // Next button clicked
+         $('.next').click(function(){
+         if( $('.active').parent('.gallery').children('img:last').hasClass('active') ) {
+         $('.active').removeClass().parent('.gallery').children('img:first').addClass('active');
+         lightbox();
+         } else {
+         $('.active').removeClass().next('img').addClass('active');
+         lightbox();
+         }
+         });
+         
+         // Prev button clicked
+         $('.prev').click(function(){
+         if( $('.active').parent('.gallery').children('img:first').hasClass('active') ) {
+         $('.active').removeClass().parent('.gallery').children('img:last').addClass('active');
+         lightbox();
+         } else {
+         $('.active').removeClass().prev('img').addClass('active');
+         lightbox();
+         }
+         }); 
+         });
+      </script>
+   </body>
+</html>

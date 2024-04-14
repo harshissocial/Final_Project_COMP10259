@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="css/contact_styles.css">
+        <link rel="stylesheet" href="css/nav_styles.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/sass_styles.css">
+        <script></script>
+    </head>
+    <body>
+        <!-- Background video -->
+        <video autoplay muted loop id="bgVideo">
+            <source src="res/videos/bg.mp4" type="video/mp4">
+        </video>
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="index.html#header">Home</a>
+            <a href="index.html#introduction">About</a>
+            <a href="index.html#photos">Photos</a>
+            <a href="index.html#videos">Videos</a>
+            <a href="index.html#preyspredators">Preys & Predators</a>
+            <a href="index.html#facts">World Count</a>
+            <a href="#">Contact Us</a>
+            <a href="honesty.html">Honesty</a>
+        </div>
+        <!-- Contact Form -->
+        <div id="all-content">
+            <div class="row">
+                <!-- Contact Information (Left Side) -->
+                <div class="column info">
+                    <h1>
+                    Any Question?<br>Write it and send to us!</h3>
+                    <p id="contact-info-p">For any queries related to the content of this website, you can write your message and send it to us.
+                        We try to respond to all the queries within 7 days. You can also reach to us using the methods
+                        below.
+                    </p>
+                    <p class="contact-item"><a href="tel:+12223334444">📞 +1 222 333 4444</a></p>
+                    <p class="contact-item"><a href="https://maps.app.goo.gl/KgcDR6CxeHedNmM96" target="_blank">📍 100 City Center Dr, Mississauga</a></p>
+                    <p class="contact-item"><a href="mailto:hello@example.com">✉️ hello@example.com</a></p>
+                </div>
+                <!-- Contact Form (Right Side) -->
+                <div class="column form">
+                    <section class="contact">
+                        <form action="https://formspree.io/f/mayrlnwj" target="_blank" method="POST" name="contactForm" autocomplete="off">
+                            <div class="input-box">
+                                <div class="input-field field">
+                                    <input type="text" placeholder="First Name" id="firstName" name="firstName" class="item" required>
+                                    <div class="error-txt">Enter atleast 5 letters</div>
+                                </div>
+                                <div class="input-field field">
+                                    <input type="text" placeholder="Last Name" id="lastName" name="lastName" class="item" required>
+                                    <div class="error-txt">Enter atleast 5 letters</div>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <div class="input-field field">
+                                    <input type="email" placeholder="Email" id="email" name="email" class="item" required>
+                                    <div class="error-txt email">Email Address can't be blank</div>
+                                </div>
+                                <div class="input-field field">
+                                    <input type="tel"  placeholder="Phone Number" id="phone" name="phone" class="item" required>
+                                    <div class="error-txt">Enter 10 digits only</div>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <div class="input-field field">
+                                    <input type="text" placeholder="Date" id="date" name="date" class="item" required>
+                                    <div class="error-txt">Enter date as dd/mm/yyyy</div>
+                                </div>
+                                <div class="input-field field">
+                                    <input type="text" placeholder="Subject" id="subject" name="subject" class="item" required>
+                                    <div class="error-txt">Subject can't be blank</div>
+                                </div>
+                            </div>
+                            <div class="textarea-field field">
+                                <textarea name="" id="message" name="message" cols="30" rows="5" placeholder="Your Message" class="item"
+                                    required></textarea>
+                                <div class="error-txt">Enter atleast 50 characters</div>
+                            </div>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- Loading all scripts afterwards to improve page speed -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script> <!-- Used for sending email -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Used for showing dialog box -->
+        <script src="script/script.js"></script>
+    </body>
+</html>

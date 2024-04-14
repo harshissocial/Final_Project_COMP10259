@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- Meta information -->
+      <meta charset="UTF-8">
+      <meta name="description" content="Discovering, Siamese fighting fish also known as Betta Fish.">
+      <meta name="keywords" content="Betta Fish, Siamese Fighting Fish">
+      <meta name="author" content="Harshdeep Singh, Palakdeep Kaur, Nishant">
+      <meta name="language" content="en">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- This webpage uses fonts from Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+      <!-- External stylesheet is being used -->
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <link rel="stylesheet" type="text/css" href="css/nav_styles.css">
+      <link rel="stylesheet" type="text/css" href="css/sass_styles.css">
+      <title>Siamese Fighting Fish</title>
+   </head>
+   <body>
+      <!-- Navigation bar -->
+      <div class="navbar">
+         <a href="#header">Home</a>
+         <a href="#introduction">About</a>
+         <a href="#photos">Photos</a>
+         <a href="#videos">Videos</a>
+         <a href="#preyspredators">Preys & Predators</a>
+         <a href="#facts">World Count</a>
+         <a href="contact.html">Contact Us</a>
+         <a href="honesty.html">Honesty</a>
+      </div>
+      <!-- Header with a background image and page heading -->
+      <header>
+         <section id="header">
+            <div class="inhead">
+               <h4>Exploring</h4>
+               <!-- Typewriter animation in header -->
+               <h1 class="typeWriterAnimation">Siamese Fighting Fish</h1>
+            </div>
+            <a href="#introduction"><img id="scroll" src="res/img/scroll.gif"></a>
+         </section>
+      </header>
+      <!-- Main content of the webpage section-by-section -->
+      <main>
+         <!-- Introduction section -->
+         <section id="introduction">
+            <p>Dive into the captivating world of <span class="special-text">Siamese Fighting Fish</span>, popularly known by aquarium enthusiasts as <span class="special-text">the betta</span> fish. Famous for their <span class="special-text">stunning beauty</span> and fascinating behavior. These vibrant fish are <span class="special-text">highly territorial</span>, exhibiting complex displays of aggression, yet they can coexist peacefully with various tank mates. Betta fish come in a variety of <span class="special-text">mesmerizing colors and tail variations</span>, with each design unique and breathtaking. Bettas possess a <span class="special-text">labyrinth organ</span>, allowing them to breathe air directly from the surface, making them adaptable to low-oxygen environments.</p>
+         </section>
+         <!-- Lightbox section -->
+         <section id="photos" style="padding: 0; margin: 0">
+            <!-- gallery.html is embedded in index.html using iframe -->
+            <iframe src="gallery.html" style="width: 100vw; height: 100vh; border: 0;" title="Gallery lightbox"></iframe>
+         </section>
+         <!-- Photos section 1
+            <section id="photos">
+            <div class="responsive">
+                <img src="res/img/crown.jpg" alt="Crown tail betta fish" width="600" height="400">
+                <div class="desc">Crown tail betta fish</div>
+            </div>
+            <div class="responsive">
+                <img src="res/img/halfmoon.jpg" alt="Halfmoon betta fish" width="600" height="400">
+                <div class="desc">Halfmoon betta fish</div>
+            </div>
+            <div class="responsive">
+                <img src="res/img/tankmates.jpg" alt="Betta with tankmates, a crab" width="600" height="400">
+                <div class="desc">Betta with tankmates, a crab</div>
+            </div>
+            </section> -->
+         <!-- Photos section 2
+            <section id="photos">
+                <div class="responsive">
+                    <img src="res/img/aquarium.jpg" alt="Betta in an aquarium" width="600" height="400">
+                    <div class="desc">Betta in an aquarium</div>
+                </div>
+                <div class="responsive">
+                    <img src="res/img/separate.jpg" alt="Male betta are kept separately" width="600" height="400">
+                    <div class="desc">Male betta are kept separately</div>
+                </div>
+                <div class="responsive">
+                    <img src="res/img/plakat.jpg" alt="Dragon Plakat betta fish" width="600" height="400">
+                    <div class="desc">Dragon Plakat betta fish</div>
+                </div>
+            </section>
+             -->
+         <!-- Videos section -->
+         <section id="videos">
+            <!-- Every video have a caption -->
+            <figure>
+               <video width="300" height="540" controls>
+                  <source src="res/videos/v2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+               </video>
+               <figcaption>A betta fish swimming in the aquarium.</figcaption>
+            </figure>
+            <figure>
+               <!-- This video starts playing automatically, is muted and controls are hidden -->
+               <video width="380" height="540" muted autoplay loop>
+                  <source src="res/videos/v1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+               </video>
+               <figcaption>A betta fish feeding and swimming along with fry.</figcaption>
+            </figure>
+            <figure>
+               <video width="300" height="540" controls>
+                  <source src="res/videos/v3.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+               </video>
+               <figcaption>Betta fish in natural habitat.</figcaption>
+            </figure>
+         </section>
+         <!-- Preys and predators section, content arranged using article semantic -->
+         <div id="preysall">
+            <section id="preyspredators">
+               <!-- Card 1 -->
+               <article>
+                  <div class="prey-wrapper">
+                     <figure>
+                        <img src="res/img/preying.webp" alt="Betta fish preying" />
+                     </figure>
+                     <div class="prey-body">
+                        <h2>Preys and Feeding</h2>
+                        <p>Bettas are carnivorous and consume zooplankton, brine shrimp, daphnia, and other small crustaceans, bloodworms, and the larvae of aquatic insects, including that mosquitos. The two biggest threats to wild bettas are habitat destruction and pollution.</p>
+                     </div>
+                  </div>
+               </article>
+               <!-- Card 2 -->
+               <article>
+                  <div class="prey-wrapper">
+                     <figure>
+                        <img src="res/img/habitated.jpg" alt="Artifical habitat for betta" />
+                     </figure>
+                     <div class="prey-body">
+                        <h2>Predators and Threats</h2>
+                        <p>The two biggest threats to wild bettas are habitat destruction and pollution. Its predators are larger fish, cats, newts, salamanders, and birds. Humans also reduce their numbers in the wild by capturing them to house them in captivity as pets or for fighting competitions with other males</p>
+                     </div>
+                  </div>
+               </article>
+               <!-- Card 3 -->
+               <article>
+                  <div class="prey-wrapper">
+                     <figure>
+                        <img src="res/img/fry.jpg" alt="Betta fish preying" />
+                     </figure>
+                     <div class="prey-body">
+                        <h2>More about eating habits</h2>
+                        <p>In the wild, they predominately feed upon insects and larvae, but also enjoy algae that are on the water's surface (Hargrove, 1999). Some of these organisms that the betta fish prey on include mosquitos, earthworms, shrimp, grasshoppers, blue-green algae and spirulina algae.</p>
+                     </div>
+                  </div>
+               </article>
+            </section>
+         </div>
+         <!-- World count section -->
+         <section id="facts">
+            <ol id="facts-list">
+               <li>There are currently more than 73 recognized betta species in the genus.</li>
+               <li> All 73 species originated in Southeast Asia, namely Cambodia, Laos, Myanmar, Indonesia, Thailand, and Vietnam.</li>
+               <li>However, the fish most people are familiar with is Betta splendens, or Siamese Fighting Fish.</li>
+               <li>Bettas were first domesticated over 1,000 years ago. Bettas became known outside Thailand during 1788-1851.</li>
+               <li>The IUCN Red list classifies several Betta species as Vulnerable.</li>
+            </ol>
+         </section>
+      </main>
+    </body>
+</html>
