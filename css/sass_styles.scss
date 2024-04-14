@@ -1,0 +1,36 @@
+// Change the menu text colour from white to yellow.
+$menutextcolor : yellow;
+.navbar a {
+    color: $menutextcolor;
+}
+
+// Change the menu text hover colour from yellow to white.
+$menutexthover: white;
+.navbar a {  
+    &:hover {
+        color: $menutexthover;
+    }
+}
+  
+// Change all the buttons background colour of index.html web page to red.
+// Making chnage to button in contact.html as there is no button in index.html
+$buttonBackground : red;
+form button {
+    background-color: $buttonBackground;
+    color: $menutexthover;
+}
+
+// Apply the dashed border to the Contact Us Form.
+$contactformborder: 1px dashed white;
+.column{
+    border: $contactformborder;
+}
+
+// Add the "after" effect to all the button's name and make them capital.
+form button {
+    text-transform: uppercase;
+    &::after {
+      content: ' now';
+    }
+}
+  

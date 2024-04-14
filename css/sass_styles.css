@@ -1,0 +1,23 @@
+.navbar a {
+  color: yellow;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+form button {
+  background-color: red;
+  color: white;
+}
+
+.column {
+  border: 1px dashed white;
+}
+
+form button {
+  text-transform: uppercase;
+}
+form button::after {
+  content: " now";
+}/*# sourceMappingURL=sass_styles.css.map */

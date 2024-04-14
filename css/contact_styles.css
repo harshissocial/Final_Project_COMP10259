@@ -1,0 +1,147 @@
+* {
+	font-family: Arial, sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: auto;
+	background: linear-gradient(to right, #4ecdc4, #556270);
+	color: white;
+}
+
+#bgVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	/* Makes the video a full screen background */
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: fill;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.column {
+	float: left;
+	padding: 20px 50px;
+	height: 73vh;
+	/*Creates a translucent glass effect */
+	background: rgba(0, 0, 0, 0.58);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(15.9px);
+	-webkit-backdrop-filter: blur(15.9px);
+	border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.info {
+	width: 25%;
+}
+
+.form {
+	width: 40%;
+}
+
+#contact-info-p {
+	margin-top: 30px;
+	margin-bottom: 25px;
+	font-size: medium;
+}
+
+.contact-item {
+	margin-top: 10px;
+	font-size: medium;
+}
+
+.contact-item a {
+	/* Removes default styling of anchor tag */
+	text-decoration: none;
+	color: inherit;
+}
+
+.contact form {
+	width: 600px;
+	text-align: center;
+}
+
+form .input-box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.input-box .input-field {
+	width: 45.5%;
+}
+
+.field .item {
+	width: 100%;
+	padding: 15px;
+	background: transparent;
+	border: 2px solid #fff;
+	outline: none;
+	border-radius: 6px;
+	font-size: 16px;
+	color: #ededed;
+	margin: 12px 0;
+}
+
+.field .item:focus {
+	/* When user is entering data in a field */
+	border: 2px solid #fff;
+	box-shadow: 0 0 10px #fff;
+	transition: .5s;
+}
+
+.field.error .item {
+	border-color: #d93025;
+}
+
+.field .item::placeholder {
+	color: rgba(255, 255, 255, .3);
+}
+
+.field .error-txt {
+	font-size: 14.5px;
+	color: #d93025;
+	text-align: left;
+	margin: -10px 0 0px;
+	visibility: hidden;
+}
+
+.field.error .error-txt {
+	visibility: visible;
+}
+
+form .textarea-field .item {
+	resize: none;
+}
+
+form .textarea-field .error-txt {
+	margin-top: -15px;
+}
+
+form button {
+	width: 105%;
+	padding: 12px 32px;
+	background: white;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	font-size: 16px;
+	color: #333;
+	letter-spacing: 1px;
+	font-weight: 600;
+	cursor: pointer;
+	margin-top: 20px;
+	transition: .5s;
+}
+
+form button:hover {
+	box-shadow: 0 0 10px #0ef;
+}
